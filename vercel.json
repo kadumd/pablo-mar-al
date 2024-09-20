@@ -13,7 +13,7 @@
     "routes": [
       {
         "src": "/",
-        "dest": "/frontend/view/index.html"
+        "dest": "/index.html"
       },
       {
         "src": "/index.css",
