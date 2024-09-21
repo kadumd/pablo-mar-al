@@ -15,9 +15,7 @@ function jump (){
 const loop = setInterval(() => {
     const posicaoDoMarçal = +window.getComputedStyle (player).bottom.replace ('px', '');
     const posicaoDACadeira = cadeira.offsetLeft
-    console.log(posicaoDACadeira)
-    console.log(posicaoDoMarçal)
-    if (posicaoDACadeira <= 71 && posicaoDACadeira > 0 && posicaoDoMarçal < 245.5) {
+    if (posicaoDACadeira <= 106.2 && posicaoDACadeira > 0 && posicaoDoMarçal < 200) {
         player.style.animation = "none"
         player.style.bottom = `${posicaoDoMarçal}`
 
@@ -32,3 +30,11 @@ const loop = setInterval(() => {
 
 document.addEventListener("keydown", jump)
 document.addEventListener("click", jump)
+
+function fases() {
+    setTimeout(() => {
+        cadeira.style.animation = "ola 1s infinite linear"
+        console.log("ola")
+    }, 30000);
+}
+fases()

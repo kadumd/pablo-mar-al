@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -12,10 +12,10 @@ body{
     width: 100vw;
 }
 
-#player{
+#player {
     position: absolute;
-    right: 80%;
-    height: 100px;
+    right: 90%;
+    height: 120px;
     width: 50px;
     background-color: yellow;
 }
@@ -24,21 +24,21 @@ body{
     animation: pulo 500ms ease-out;
 }
 
-#cadeira{
+#cadeira {
     position: absolute;
     height: 100px;
     width: 100px;
     background-color: red;
-    animation: ola 1s infinite linear;
+    animation: ola 2s infinite linear;
 }
 
-#chao{
+#chao {
     height: 25%;
     width: 100%;
     background-color: gray;
 }
 
-.parte-de-cima{
+.parte-de-cima {
     display: flex;
     align-items: end;
     height: 75%;
@@ -50,14 +50,46 @@ body{
 /*keyframes*/
 
 @keyframes ola {
-    from{right: -50px;}
-    to{right: 100%;}
+    from {
+        right: -50px;
+    }
+
+    to {
+        right: 100%;
+    }
 }
 
 @keyframes pulo {
-    0% {bottom: 25%;}
-    40% {bottom: 60%;}
-    50%{bottom: 60%;}
-    60% {bottom: 60%;}    
-    100%{bottom: 25%;}
+    0% {
+        bottom: 25%;
+    }
+
+    40% {
+        bottom: 60%;
+    }
+
+    50% {
+        bottom: 60%;
+    }
+
+    60% {
+        bottom: 60%;
+    }
+
+    100% {
+        bottom: 25%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #player {
+        height: 75px;
+        width: 25px;
+        font-size: 10px;
+    }
+    #cadeira {
+        height: 40px;
+        width: 40px;
+        animation: ola 1s infinite linear;
+    }
 }
